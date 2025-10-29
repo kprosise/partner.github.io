@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Simplify the chaos of developing, securing, and updating Linux-based IoT and Edge devices &#8212; FoundriesFactory Partners  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=a5f3c8c0" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=6dbb43f8"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.foundries.io/latest/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+  <aside class="bd-header-announcement d-print-none d-none" aria-label="Announcement" data-pst-announcement-url="https://raw.githubusercontent.com/foundriesio/docs/refs/heads/main/source/_templates/announcement.html"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo-light.png" class="logo__image only-light" alt="FoundriesFactory partner logo"/>
+    <img src="_static/logo-dark.png" class="logo__image only-dark pst-js-only" alt="FoundriesFactory partner logo"/>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="simplify-the-chaos-of-developing-securing-and-updating-linux-based-iot-and-edge-devices">
+<h1><em>Simplify the chaos of developing, securing, and updating Linux-based IoT and Edge devices</em><a class="headerlink" href="#simplify-the-chaos-of-developing-securing-and-updating-linux-based-iot-and-edge-devices" title="Link to this heading">#</a></h1>
+</section>
+<section id="quick-start-guide">
+<h1><em>Quick Start Guide</em><a class="headerlink" href="#quick-start-guide" title="Link to this heading">#</a></h1>
+<p href="https://www.qualcomm.com/">
+    <img width="200" src="images/qualcomm_logo.jpg">
+</p>
+<p>Unlock the potential of your IoT and Edge device development with the powerful partnership of Qualcomm and Foundries.io!
+Our comprehensive end-to-end DevSecOps platform is designed for embedded developers like you,
+helping your projects to be efficient, more secure, and scalable.</p>
+<p>This guide covers everything from creating your Factory, to flashing, booting, and testing your AI applications.</p>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#document-revision-history">Document Revision History</a></p></li>
+<li><p><a class="reference internal" href="#definitions-acronyms-and-abbreviations">Definitions, Acronyms, and Abbreviations</a></p></li>
+<li><p><a class="reference internal" href="#getting-started">Getting Started</a></p>
+<ul>
+<li><p><a class="reference internal" href="#create-an-account">Create an Account</a></p></li>
+<li><p><a class="reference internal" href="#create-a-factory">Create a Factory</a></p></li>
+<li><p><a class="reference internal" href="#members-tab">Members Tab</a></p></li>
+<li><p><a class="reference internal" href="#fioctl-installation">Fioctl Installation</a></p></li>
+<li><p><a class="reference internal" href="#configure-git">Configure git</a></p></li>
+<li><p><a class="reference internal" href="#qualcomm-robotics-rb3g2-development-kit">Qualcomm® Robotics RB3G2 Development Kit</a></p></li>
+<li><p><a class="reference internal" href="#serial-console">Serial Console</a></p></li>
+<li><p><a class="reference internal" href="#connect-via-wifi">Connect via WiFi</a></p></li>
+<li><p><a class="reference internal" href="#enabling-ethernet-and-usb">Enabling Ethernet and USB</a></p></li>
+<li><p><a class="reference internal" href="#ssh">SSH</a></p></li>
+<li><p><a class="reference internal" href="#register-your-device">Register Your Device</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#developer-workflows">Developer Workflows</a></p>
+<ul>
+<li><p><a class="reference internal" href="#git-repositories">Git Repositories</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#compose-apps">Compose-Apps</a></p>
+<ul>
+<li><p><a class="reference internal" href="#qualcomm-ai-hub">Qualcomm® AI Hub</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fioctl-examples">Fioctl Examples</a></p></li>
+<li><p><a class="reference internal" href="#factory-images">FoundriesFactory Images</a></p>
+<ul>
+<li><p><a class="reference internal" href="#lmp-factory-image">LmP Factory Image</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#wireguard-vpn">Wireguard VPN</a></p></li>
+<li><p><a class="reference internal" href="#updating-factory-images">Updating FoundriesFactory Images</a></p></li>
+<li><p><a class="reference internal" href="#useful-links">Useful Links</a></p></li>
+</ul>
+</section>
+<section id="document-revision-history">
+<h2>Document Revision History<a class="headerlink" href="#document-revision-history" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>Comments</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>v0.1</p></td>
+<td><p>2024-07-01</p></td>
+<td><p>Initial release</p></td>
+</tr>
+<tr class="row-odd"><td><p>v0.2</p></td>
+<td><p>2025-03-10</p></td>
+<td><p>Adding pictures and videos</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="definitions-acronyms-and-abbreviations">
+<h2>Definitions, Acronyms, and Abbreviations<a class="headerlink" href="#definitions-acronyms-and-abbreviations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;factory&gt;</span></code></p></td>
+<td><p>Your Factory name</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;device_name&gt;</span></code></p></td>
+<td><p>Device name used when you registered the device</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;app_name&gt;</span></code></p></td>
+<td><p>Docker-compose app available to run on the device</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;tag_name&gt;</span></code></p></td>
+<td><p>The branch you want your device to follow</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;IP&gt;</span></code></p></td>
+<td><p>Device IP</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<p>Access the link below and follow the instructions to sign up and create your Factory.
+<a class="reference external" href="https://app.foundries.io/factories/+/qualcomm" rel="noreferrer" target="_blank">https://app.foundries.io/factories/+/qualcomm</a></p>
+<section id="create-an-account">
+<h3>Create an Account<a class="headerlink" href="#create-an-account" title="Link to this heading">#</a></h3>
+<p>Create a new account if you do not have one, or continue with your existing Github or Google account.</p>
+<p align="center">
+    <img width="800" src="images/qualcomm-image1.png">
+</p>
+<p align="center">Sign-Up</p>
+</section>
+<section id="create-a-factory">
+<h3>Create a Factory<a class="headerlink" href="#create-a-factory" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Select the platform *</p></li>
+<li><p>Name your Factory</p></li>
+<li><p>Click the Create Factory button</p></li>
+</ol>
+<p><em>* If you want to try FoundriesFactory on a different Qualcomm platform,
+create the Factory as suggested for Qualcomm RB3 Gen 2 Development Kit and contact Foundries.io at contact&#64;foundries.io.</em></p>
+<p align="center">
+    <img width="800" src="images/qualcomm-image2.png">
+</p>
+<p align="center">Platform Selection</p>
+<p>NOTE: Based on the selected platform, the <code class="docutils literal notranslate"><span class="pre">&lt;machine-name&gt;</span></code> changes as shown in the table below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Device Name</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">&lt;machine-name&gt;</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Qualcomm RB3 Gen 2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qcs6490-rb3gen2-vision-kit</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="members-tab">
+<h3>Members Tab<a class="headerlink" href="#members-tab" title="Link to this heading">#</a></h3>
+<p>The Factory owners may invite additional users to their account via email under the “Members” tab of the Factory interface.
+- Manage your Factory users: <code class="docutils literal notranslate"><span class="pre">https://app.foundries.io/factories/&lt;factory&gt;/members/</span></code></p>
+</section>
+<section id="fioctl-installation">
+<h3>Fioctl Installation<a class="headerlink" href="#fioctl-installation" title="Link to this heading">#</a></h3>
+<p>Fioctl™ is a simple tool for interacting with the Foundries.io™ REST API.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.foundries.io/latest/getting-started/install-fioctl/index.html#gs-install-fioctl" rel="noreferrer" target="_blank">Fioctl CLI Installation</a></p></li>
+</ul>
+</section>
+<section id="configure-git">
+<h3>Configure git<a class="headerlink" href="#configure-git" title="Link to this heading">#</a></h3>
+<p>After Fioctl is properly setup, use its Git credential helper to allow pushing to your repos with FoundriesFactory.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.foundries.io/latest/getting-started/git-config/index.html#gs-git-config" rel="noreferrer" target="_blank">Configuring Git</a></p></li>
+</ul>
+<p><strong>Note</strong>: On macOS, you may encounter authentication issues due to Git on OSX using the Keychain Access Utility.
+The solution is to remove Keychain Access entries from your git config file.</p>
+</section>
+<section id="qualcomm-robotics-rb3g2-development-kit">
+<h3>Qualcomm® Robotics RB3G2 Development Kit<a class="headerlink" href="#qualcomm-robotics-rb3g2-development-kit" title="Link to this heading">#</a></h3>
+<p>Once creating your Factory, it will build the source code for the RB3G2 and produce a Target.
+A Target is a over-the-air update that can provide the build artifacts for initial provisioning.</p>
+<ol class="arabic simple">
+<li><p>Navigate To the Targets Section of Your Factory
+Click the latest Targets with the platform-main trigger.</p></li>
+</ol>
+<p align="center">
+    <img width="800" src="images/qualcomm-image3.png">
+</p>
+<p align="center">Platform Main</p>
+<p>Expand the run in the Runs section and download the Factory image.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lmp-factory-image-qcs6490-rb3gen2-vision-kit.qcomflash.tar.gz</span></code></p></li>
+</ul>
+<p align="center">
+    <img width="800" src="images/qualcomm-image4.png">
+</p>
+<p align="center">Factory Image</p>
+<ol class="arabic simple" start="2">
+<li><p>Extract the <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code>.</p></li>
+<li><p>Open a terminal and change the directory into <code class="docutils literal notranslate"><span class="pre">lmp-factory-image-qcm6490</span></code>.</p></li>
+<li><p>The compressed archive contains the flashing tool <code class="docutils literal notranslate"><span class="pre">qdl</span></code>.</p>
+<ul class="simple">
+<li><p>Note: The tool from the build has the interpreter set incorrectly.</p></li>
+</ul>
+</li>
+<li><p>Download and compile qdl for your platform:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/linux-msm/qdl</span></code></p></li>
+<li><p>Read the README and install build dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">qdl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span></code></p></li>
+</ul>
+</li>
+<li><p>Disable ModemManager on some host systems if necessary.</p></li>
+</ol>
+<p>Now configure the Qualcomm® Robotics RB3G2 Development Kit:</p>
+<ol class="arabic simple">
+<li><p>Set up <code class="docutils literal notranslate"><span class="pre">DIP_SW_0</span></code> positions 1 and 2 to <code class="docutils literal notranslate"><span class="pre">ON</span></code>.
+This enables serial output to the debug port.</p></li>
+<li><p>Connect the USB debug cable to the host.
+Baud rate is 115200.</p>
+<ul class="simple">
+<li><p>You can use your favorite UART client to access the console, such as minicom, putty etc.</p></li>
+</ul>
+</li>
+<li><p>The serial connection is based on the FTDI chip:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/dev/serial/by-id/usb-FTDI_FT230X_Basic_UART_&lt;serial</span> <span class="pre">ID&gt;-if00-port0</span></code></p></li>
+</ul>
+</li>
+<li><p>Plug in the USB-C cable from the host.</p></li>
+<li><p>Run the command to flash:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./qdl</span> <span class="pre">--debug</span> <span class="pre">prog_firehose_ddr.elf</span> <span class="pre">rawprogram*.xml</span> <span class="pre">patch*.xml</span></code></p></li>
+</ul>
+</li>
+<li><p>Press and hold the F_DL button and connect the power cable.</p></li>
+</ol>
+</section>
+<section id="serial-console">
+<h3>Serial Console<a class="headerlink" href="#serial-console" title="Link to this heading">#</a></h3>
+<p>After flashing, the device should boot the Linux microPlatform.
+Use your serial console to log in.</p>
+<p>Username: <code class="docutils literal notranslate"><span class="pre">fio</span></code>
+Password: <code class="docutils literal notranslate"><span class="pre">fio</span></code></p>
+</section>
+<section id="connect-via-wifi">
+<h3>Connect via WiFi<a class="headerlink" href="#connect-via-wifi" title="Link to this heading">#</a></h3>
+<p>Using the WiFi radio, connect it to the internet using NetworkManager CLI:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo nmcli device wifi connect “&lt;AP Name&gt;” password “&lt;AP password&gt;”
+</pre></div>
+</div>
+<p>The sudo password is <code class="docutils literal notranslate"><span class="pre">fio</span></code>.</p>
+</section>
+<section id="enabling-ethernet-and-usb">
+<h3>Enabling Ethernet and USB<a class="headerlink" href="#enabling-ethernet-and-usb" title="Link to this heading">#</a></h3>
+<p>In order to enable Ethernet, provide firmware in the Yocto recipe below.
+This is a one time operation, which will also enable the USB type A ports to function</p>
+<p>Register and log in to https://www.renesas.com, then <a class="reference external" href="https://www.renesas.com/us/en/products/interface/usb-switches-hubs/upd720201-usb-30-host-controller" rel="noreferrer" target="_blank">download firmware</a>.</p>
+<p>Once downloaded, copy USB3-201-202-FW-20131112.zip at recipes-firmware/firmware/renesas-upd720201
+and add the renesas-upd720201 package to your image.</p>
+<section id="add-firmware-zip-to-the-correct-layer-location">
+<h4>Add Firmware zip to the Correct Layer Location<a class="headerlink" href="#add-firmware-zip-to-the-correct-layer-location" title="Link to this heading">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/meta-subscriber-overrides.git
+<span class="nb">cd</span><span class="w"> </span>meta-subscriber-overrides
+mkdir<span class="w"> </span>-p<span class="w"> </span>recipes-firmware/firmware/renesas-upd720201
+cp<span class="w"> </span>/tmp/USB3-201-202-FW-20131112.zip<span class="w"> </span>recipes-firmware/firmware/renesas-upd720201
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;FILESEXTRAPATHS:prepend := &quot;${THISDIR}/${PN}:&quot;&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>recipes-firmware/firmware/renesas-upd720201_20131112.bbappend
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;SRC_URI += &quot;file://USB3-201-202-FW-20131112.zip&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>recipes-firmware/firmware/renesas-upd720201_20131112.bbappend
+</pre></div>
+</div>
+</section>
+<section id="add-renesas-upd720201-to-lmp-factory-image">
+<h4>Add renesas-upd720201 to lmp-factory-image<a class="headerlink" href="#add-renesas-upd720201-to-lmp-factory-image" title="Link to this heading">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CORE_IMAGE_BASE_INSTALL += &quot;renesas-upd720201&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>recipes-samples/images/lmp-factory-image.bb
+</pre></div>
+</div>
+</section>
+<section id="commit-and-push-to-create-a-new-build">
+<h4>Commit and Push to Create a new Build<a class="headerlink" href="#commit-and-push-to-create-a-new-build" title="Link to this heading">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;renesas-upd720201: add firmware file&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>After you push, the FoundriesFactory will build a new target. Once built, any registered device will update over the air.</p>
+</section>
+</section>
+<section id="ssh">
+<h3>SSH<a class="headerlink" href="#ssh" title="Link to this heading">#</a></h3>
+<p>Once connected to the network you can log in over ssh if desired:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qcs6490-rb3gen2-vision-kit.local<span class="w"> </span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>fio@&lt;IP&gt;
+</pre></div>
+</div>
+<p>Password: <code class="docutils literal notranslate"><span class="pre">fio</span></code></p>
+</section>
+<hr class="docutils" />
+<section id="register-your-device">
+<h3>Register Your Device<a class="headerlink" href="#register-your-device" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://docs.foundries.io/latest/getting-started/register-device/index.html" rel="noreferrer" target="_blank">Register your device</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="developer-workflows">
+<h2>Developer Workflows<a class="headerlink" href="#developer-workflows" title="Link to this heading">#</a></h2>
+<p>Your Factory produces Targets, which are references to platform images and Docker applications.</p>
+<p>Find your Factory source code at:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">https://source.foundries.io/factories/&lt;factory&gt;/</span></code></p></li>
+</ul>
+<p>Find The built Targets at:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">https://app.foundries.io/factories/&lt;factory&gt;/targets/</span></code></p></li>
+</ul>
+<section id="git-repositories">
+<h3>Git Repositories<a class="headerlink" href="#git-repositories" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ci-scripts.git</span></code>: Configures your factory branches - <code class="docutils literal notranslate"><span class="pre">factory-config.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containers.git</span></code>: Contains the source code for your Docker applications</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lmp-manifest.git</span></code>: Yocto manifest for your platform build</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">meta-subscriber-overrides.git</span></code>: Yocto layer which overrides the Linux microPlatform</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="compose-apps">
+<h2>Compose Apps<a class="headerlink" href="#compose-apps" title="Link to this heading">#</a></h2>
+<p>Compose Apps fill the gap for Factory devices in distributing applications.</p>
+<ul class="simple">
+<li><p>Build your own <a class="reference external" href="https://docs.foundries.io/latest/reference-manual/docker/compose-apps.html" rel="noreferrer" target="_blank">Compose Apps</a>.</p></li>
+<li><p>Your Factory also has some sample Apps ready to deploy.</p></li>
+</ul>
+<section id="qualcomm-ai-hub">
+<h3>Qualcomm® AI Hub<a class="headerlink" href="#qualcomm-ai-hub" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://aihub.qualcomm.com/get-started" rel="noreferrer" target="_blank">Qualcomm® AI Hub</a> simplifies deploying AI models for vision, audio, and speech applications to edge devices.
+You can optimize, validate, and deploy your own AI models on hosted Qualcomm platform devices within minutes.</p>
+<p>Please see our <a class="reference internal" href="#getting-started">Getting Started</a> guide to start using a Factory with AIHub.</p>
+<p>The applications below which have a prefix of <code class="docutils literal notranslate"><span class="pre">gst-ai</span></code> use the models from <a class="reference external" href="https://aihub.qualcomm.com" rel="noreferrer" target="_blank">AIHub</a> and have been packaged into the <code class="docutils literal notranslate"><span class="pre">qimsdk-lmp</span></code> image in your Factory.</p>
+<ul class="simple">
+<li><p>If you are curious how this process works, refer to <code class="docutils literal notranslate"><span class="pre">https://source.foundries.io/&lt;factory&gt;/containers.git/tree/qimsdk-lmp/Dockerfile</span></code></p></li>
+<li><p>Should you want to add or replace a model from <a class="reference external" href="https://aihub.qualcomm.com" rel="noreferrer" target="_blank">AIHub</a>,
+modify the <code class="docutils literal notranslate"><span class="pre">qimsdk-lmp</span></code> Dockerfile and add a <code class="docutils literal notranslate"><span class="pre">RUN</span></code> command to download the file into <code class="docutils literal notranslate"><span class="pre">/src/models/</span></code> inside the container.</p>
+<ul>
+<li><p>During runtime, the models will be placed in <code class="docutils literal notranslate"><span class="pre">/opt</span></code> and can be referenced in the Compose command to instruct the application to use a specific model.</p></li>
+<li><p>Please review the <code class="docutils literal notranslate"><span class="pre">gst-ai-classification</span></code> <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> in <code class="docutils literal notranslate"><span class="pre">https://source.foundries.io/&lt;factory&gt;/containers.git</span></code> as an example of how to run a different model.</p></li>
+</ul>
+</li>
+</ul>
+<section id="httpd-server-app">
+<h4>Httpd Server App<a class="headerlink" href="#httpd-server-app" title="Link to this heading">#</a></h4>
+<p>This is a simple httpd server, built from a Dockerfile in the Factory source code.
+Enable the <code class="docutils literal notranslate"><span class="pre">shellhttpd</span></code> Compose App before deployment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>shellhttpd.disabled<span class="w"> </span>shellhttpd
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“enable<span class="w"> </span>shellhttp”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App does not require any hardware other than a network connection.</p>
+</section>
+<section id="qualcomm-imsdk-gstreamer-sample-app">
+<h4>Qualcomm IMSDK GStreamer Sample App<a class="headerlink" href="#qualcomm-imsdk-gstreamer-sample-app" title="Link to this heading">#</a></h4>
+<p>This is a development container for the gstreamer applications listed below.
+It provides the assembled binaries, models, and video files for the applications to consume.
+If you want to build your own gstreamer pipeline application, this would be the place to start.</p>
+<p>For more information, please see the project’s <a class="reference external" href="https://github.com/foundriesio/qimsdk-lmp/blob/main/README.md" rel="noreferrer" target="_blank">README</a>.</p>
+</section>
+<section id="video-wall">
+<h4>Video Wall<a class="headerlink" href="#video-wall" title="Link to this heading">#</a></h4>
+<p>The Video wall command-line application (<code class="docutils literal notranslate"><span class="pre">gst-concurrent-videoplay-composition</span></code>) facilitates concurrent video decoding and playback for advanced video coding (AVC)-coded videos,
+and performs composition on a display for the video wall application.
+This application requires at least one input video file, which is expected to be an MP4 file with the AVC codec.</p>
+<p>For a more detailed description please see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-concurrent-videoplay-composition.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=TGe8TS7-ZTw" rel="noreferrer" target="_blank"><img alt="video wall YouTube example" src="https://img.youtube.com/vi/TGe8TS7-ZTw/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-concurrent-videoplay-composition</span></code> Compose App before deployment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-concurrent-videoplay-composition.disabled<span class="w"> </span>gst-concurrent-videoplay-composition
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-concurrent-videoplay-composition”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This compose-app requires a connected display to function properly.</p>
+</section>
+<section id="classification">
+<h4>Classification<a class="headerlink" href="#classification" title="Link to this heading">#</a></h4>
+<p>The Classification application (<code class="docutils literal notranslate"><span class="pre">gst-ai-classification</span></code>) enables subject recognition in the image.
+This can use the Qualcomm Neural Processing SDK runtime or the TensorFlow Lite (TFLite) runtime.
+The Compose file provides you will a few commands you can comment/uncomment to use different models for classification.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-ai-classification.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=L1t0hqYkM_4" rel="noreferrer" target="_blank"><img alt="classification YouTube example " src="https://img.youtube.com/vi/L1t0hqYkM_4/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-classification</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-classification.disabled<span class="w"> </span>gst-ai-classification
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-classification”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="daisy-chain-detection-and-classification">
+<h4>Daisy Chain Detection and Classification<a class="headerlink" href="#daisy-chain-detection-and-classification" title="Link to this heading">#</a></h4>
+<p>The Daisy chain detection and classification application (<code class="docutils literal notranslate"><span class="pre">gst-ai-daisychain-detection-classification</span></code>) enables cascaded object detection and classification with a camera and a file source.
+This use case involves detecting objects and classifying the detected objects.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/daisy-chain-detection-and-classification.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=WWgbooxy6sE" rel="noreferrer" target="_blank"><img alt="daisy chain detection and classification YouTube example" src="https://img.youtube.com/vi/WWgbooxy6sE/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-daisychain-detection-classification</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-daisychain-detection-classification.disabled<span class="w"> </span>gst-ai-daisychain-detection-classification
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-daisychain-detection-classification”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="mono-depth-from-video">
+<h4>Mono Depth From Video<a class="headerlink" href="#mono-depth-from-video" title="Link to this heading">#</a></h4>
+<p>The Mono depth from video application (<code class="docutils literal notranslate"><span class="pre">gst-ai-monodepth</span></code>) infers depth from a live camera stream.</p>
+<p>For detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/mono-depth-from-video.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=ddw2JM5ySQ0" rel="noreferrer" target="_blank"><img alt="mono depth YouTube example" src="https://img.youtube.com/vi/ddw2JM5ySQ0/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-monodepth</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-monodepth.disabled<span class="w"> </span>gst-ai-monodepth
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-monodepth”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="object-detection">
+<h4>Object Detection<a class="headerlink" href="#object-detection" title="Link to this heading">#</a></h4>
+<p>The Object detection application (<code class="docutils literal notranslate"><span class="pre">gst-ai-object-detection</span></code>) detects objects within images and videos.
+This use case demonstrates the execution of YOLOv5, YOLOv8, and YOLO-NAS using the Qualcomm Neural Processing SDK runtime.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-ai-object-detection.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Fax6rqp1YeI" rel="noreferrer" target="_blank"><img alt="Object detection YouTube example" src="https://img.youtube.com/vi/Fax6rqp1YeI/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-object-detection</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-object-detection.disabled<span class="w"> </span>gst-ai-object-detection
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-object-detection”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="parallel-ai-fusion">
+<h4>Parallel AI Fusion<a class="headerlink" href="#parallel-ai-fusion" title="Link to this heading">#</a></h4>
+<p>The Parallel AI fusion application (<code class="docutils literal notranslate"><span class="pre">gst-ai-parallel-inference</span></code>) enables object detection and classification, pose detection, and image segmentation on a live camera stream.
+This use case utilizes the Qualcomm Neural Processing SDK runtime for object detection and image segmentation,
+and the TFLite runtime for classification and pose detection.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-ai-parallel-inference.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Uxk4xZtPi9Y" rel="noreferrer" target="_blank"><img alt="parallel ai fusion YouTube example" src="https://img.youtube.com/vi/Uxk4xZtPi9Y/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-parallel-inference</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-parallel-inference.disabled<span class="w"> </span>gst-ai-parallel-inference
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-parallel-inference”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="pose-detection">
+<h4>Pose Detection<a class="headerlink" href="#pose-detection" title="Link to this heading">#</a></h4>
+<p>The Pose detection application (<code class="docutils literal notranslate"><span class="pre">gst-ai-pose-detection</span></code>) enables detection of a subjects body pose in an image or video.
+This use case utilizes a video stream from a camera, then leverages TFLite for pose detection, display the results on the screen.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-ai-pose-detection.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=eDf4BoL6dKQ" rel="noreferrer" target="_blank"><img alt="pose detection YouTube example" src="https://img.youtube.com/vi/eDf4BoL6dKQ/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-pose-detection</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-pose-detection.disabled<span class="w"> </span>gst-ai-pose-detection
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-pose-detection”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="image-segmentation">
+<h4>Image Segmentation<a class="headerlink" href="#image-segmentation" title="Link to this heading">#</a></h4>
+<p>The Image segmentation application (<code class="docutils literal notranslate"><span class="pre">gst-ai-segmentation</span></code>) divides an image into meaningful parts or segments,
+assigning a label to each homogenous segment based on similarity of attributes.
+This App utilizes both the Qualcomm Neural Processing SDK runtime and TFLite runtime for image segmentation.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-ai-segmentation.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=QJTRbk2hv2Y" rel="noreferrer" target="_blank"><img alt="image segmentation YouTube example" src="https://img.youtube.com/vi/QJTRbk2hv2Y/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-ai-segmentation</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-ai-segmentation.disabled<span class="w"> </span>gst-ai-segmentation
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-ai-segmentation”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="multiple-camera-streaming">
+<h4>Multiple Camera Streaming<a class="headerlink" href="#multiple-camera-streaming" title="Link to this heading">#</a></h4>
+<p>The multiple camera streaming application (<code class="docutils literal notranslate"><span class="pre">gst-multi-camera-example</span></code>) enables simultaneous streaming from two camera sensors.
+It composes camera feeds side-by-side to display on a screen, or encodes and stores the video streams to file.
+Typical use cases that need multiple camera inputs are dash cameras or stereo cameras, which can use this app as a reference.</p>
+<p>For a detailed description see <a class="reference external" href="https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-50/gst-multi-camera-stream-example.html?product=1601111740013072&amp;amp;facet=Qualcomm%20Intelligent%20Multimedia%20SDK" rel="noreferrer" target="_blank">Qualcomm Linux Sample Apps</a>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=k7Gg_kdIbFg" rel="noreferrer" target="_blank"><img alt="multiple camera streaming YouTube example" src="https://img.youtube.com/vi/k7Gg_kdIbFg/0.jpg" /></a></p>
+<p>Enable the <code class="docutils literal notranslate"><span class="pre">gst-multi-camera-example</span></code> Compose App:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://source.foundries.io/factories/&lt;factory&gt;/containers.git
+git<span class="w"> </span>mv<span class="w"> </span>gst-multi-camera-example.disabled<span class="w"> </span>gst-multi-camera-example
+git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="w"> </span>“gst-multi-camera-example”<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>push
+</pre></div>
+</div>
+<p>This App requires a connected display and the camera mezzanine to function properly.</p>
+</section>
+<section id="deploy">
+<h4>Deploy<a class="headerlink" href="#deploy" title="Link to this heading">#</a></h4>
+<p>After you push, your Factory will build a new Target.
+Afterwaards, deploy as described below.</p>
+</section>
+</section>
+</section>
+<section id="fioctl-examples">
+<h2>Fioctl Examples<a class="headerlink" href="#fioctl-examples" title="Link to this heading">#</a></h2>
+<p>To deploy the applications listed below, you must have enabled them as described above.
+Default polling time on devices is five minutes.
+Once you have issued your deployment command, please wait up to five minutes to see the change reflected.</p>
+<section id="view-targets">
+<h3>View Targets:<a class="headerlink" href="#view-targets" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>targets<span class="w"> </span>list<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;
+</pre></div>
+</div>
+</section>
+<section id="view-devices">
+<h3>View Devices:<a class="headerlink" href="#view-devices" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>list<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;
+</pre></div>
+</div>
+</section>
+<section id="change-device-tag">
+<h3>Change Device Tag:<a class="headerlink" href="#change-device-tag" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--tags<span class="w"> </span>&lt;tag_name&gt;
+</pre></div>
+</div>
+</section>
+<section id="change-device-application">
+<h3>Change Device Application:<a class="headerlink" href="#change-device-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>&lt;app_name1&gt;,&lt;app_name2&gt;,&lt;app_name3&gt;
+</pre></div>
+</div>
+</section>
+<section id="deploy-shellhttpd-application">
+<h3>Deploy shellhttpd Application:<a class="headerlink" href="#deploy-shellhttpd-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>shellhttpd
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-concurrent-videoplay-composition-application">
+<h3>Deploy gst-concurrent-videoplay-composition Application:<a class="headerlink" href="#deploy-gst-concurrent-videoplay-composition-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-concurrent-videoplay-composition
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-classification-application">
+<h3>Deploy gst-ai-classification Application:<a class="headerlink" href="#deploy-gst-ai-classification-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-classification
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-daisychain-detection-classification-application">
+<h3>Deploy gst-ai-daisychain-detection-classification Application:<a class="headerlink" href="#deploy-gst-ai-daisychain-detection-classification-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-daisychain-detection-classification
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-monodepth-application">
+<h3>Deploy gst-ai-monodepth Application:<a class="headerlink" href="#deploy-gst-ai-monodepth-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-monodepth
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-object-detection-application">
+<h3>Deploy gst-ai-object-detection Application:<a class="headerlink" href="#deploy-gst-ai-object-detection-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-object-detection
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-parallel-inference-application">
+<h3>Deploy gst-ai-parallel-inference Application:<a class="headerlink" href="#deploy-gst-ai-parallel-inference-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-object-detection
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-pose-detection-application">
+<h3>Deploy gst-ai-pose-detection Application:<a class="headerlink" href="#deploy-gst-ai-pose-detection-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-pose-detection
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-ai-segmentation-application">
+<h3>Deploy gst-ai-segmentation Application:<a class="headerlink" href="#deploy-gst-ai-segmentation-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-ai-segmentation
+</pre></div>
+</div>
+</section>
+<section id="deploy-gst-multi-camera-example-application">
+<h3>Deploy gst-multi-camera-example Application:<a class="headerlink" href="#deploy-gst-multi-camera-example-application" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>updates<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>--apps<span class="w"> </span>gst-multi-camera-example
+</pre></div>
+</div>
+</section>
+<section id="enable-disable-wireguard-vpn">
+<h3>Enable/Disable Wireguard VPN:<a class="headerlink" href="#enable-disable-wireguard-vpn" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./fioctl<span class="w"> </span>devices<span class="w"> </span>-f<span class="w"> </span>&lt;factory&gt;<span class="w"> </span>config<span class="w"> </span>wireguard<span class="w"> </span>&lt;device_name&gt;<span class="w"> </span>enable/disable
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="factory-images">
+<h2>Factory Images<a class="headerlink" href="#factory-images" title="Link to this heading">#</a></h2>
+<section id="lmp-factory-image">
+<h3>LmP Factory Image<a class="headerlink" href="#lmp-factory-image" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="this-image-configuration-includes-the-required-packages-to-bake-into-the-final-image">
+<h2>This <a class="reference external" href="https://source.foundries.io/factories/%3Cfactory%3E/meta-subscriber-overrides.git/tree/recipes-samples/images/lmp-factory-image.bb?h=main" rel="noreferrer" target="_blank">image configuration</a> includes the required packages to bake into the final image.<a class="headerlink" href="#this-image-configuration-includes-the-required-packages-to-bake-into-the-final-image" title="Link to this heading">#</a></h2>
+</section>
+<section id="wireguard-vpn">
+<h2>Wireguard VPN<a class="headerlink" href="#wireguard-vpn" title="Link to this heading">#</a></h2>
+<p>Registered devices can form a VPN to <a class="reference external" href="https://docs.foundries.io/latest/reference-manual/remote-access/wireguard.html" rel="noreferrer" target="_blank">allow remote access—even behind firewalls</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="updating-factory-images">
+<h2>Updating Factory Images<a class="headerlink" href="#updating-factory-images" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://docs.foundries.io/latest/reference-manual/linux/linux-update.html" rel="noreferrer" target="_blank">Steps for updating your Factory</a>.</p>
+</section>
+<hr class="docutils" />
+<section id="useful-links">
+<h2>Useful Links<a class="headerlink" href="#useful-links" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.foundries.io/latest/user-guide/lmp-customization/linux-extending.html" rel="noreferrer" target="_blank">Extending the LmP</a></p></li>
+<li><p><a class="reference external" href="https://docs.foundries.io/latest/reference-manual/factory/sboms.html" rel="noreferrer" target="_blank">SBOMs</a></p></li>
+<li><p><a class="reference external" href="https://docs.foundries.io/latest/user-guide/containers-and-docker/containers.html" rel="noreferrer" target="_blank">Factory Containers</a>.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><em>Simplify the chaos of developing, securing, and updating Linux-based IoT and Edge devices</em></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start-guide"><em>Quick Start Guide</em></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#document-revision-history">Document Revision History</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-acronyms-and-abbreviations">Definitions, Acronyms, and Abbreviations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-account">Create an Account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-factory">Create a Factory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#members-tab">Members Tab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fioctl-installation">Fioctl Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-git">Configure git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qualcomm-robotics-rb3g2-development-kit">Qualcomm® Robotics RB3G2 Development Kit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-console">Serial Console</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-via-wifi">Connect via WiFi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-ethernet-and-usb">Enabling Ethernet and USB</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-firmware-zip-to-the-correct-layer-location">Add Firmware zip to the Correct Layer Location</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#add-renesas-upd720201-to-lmp-factory-image">Add renesas-upd720201 to lmp-factory-image</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-and-push-to-create-a-new-build">Commit and Push to Create a new Build</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">SSH</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#register-your-device">Register Your Device</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developer-workflows">Developer Workflows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-repositories">Git Repositories</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-apps">Compose Apps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qualcomm-ai-hub">Qualcomm® AI Hub</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#httpd-server-app">Httpd Server App</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qualcomm-imsdk-gstreamer-sample-app">Qualcomm IMSDK GStreamer Sample App</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#video-wall">Video Wall</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification">Classification</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#daisy-chain-detection-and-classification">Daisy Chain Detection and Classification</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mono-depth-from-video">Mono Depth From Video</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#object-detection">Object Detection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-ai-fusion">Parallel AI Fusion</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pose-detection">Pose Detection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#image-segmentation">Image Segmentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-camera-streaming">Multiple Camera Streaming</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy">Deploy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fioctl-examples">Fioctl Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-targets">View Targets:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#view-devices">View Devices:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-device-tag">Change Device Tag:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#change-device-application">Change Device Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-shellhttpd-application">Deploy shellhttpd Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-concurrent-videoplay-composition-application">Deploy gst-concurrent-videoplay-composition Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-classification-application">Deploy gst-ai-classification Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-daisychain-detection-classification-application">Deploy gst-ai-daisychain-detection-classification Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-monodepth-application">Deploy gst-ai-monodepth Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-object-detection-application">Deploy gst-ai-object-detection Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-parallel-inference-application">Deploy gst-ai-parallel-inference Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-pose-detection-application">Deploy gst-ai-pose-detection Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-ai-segmentation-application">Deploy gst-ai-segmentation Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-gst-multi-camera-example-application">Deploy gst-multi-camera-example Application:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enable-disable-wireguard-vpn">Enable/Disable Wireguard VPN:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factory-images">Factory Images</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lmp-factory-image">LmP Factory Image</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#this-image-configuration-includes-the-required-packages-to-bake-into-the-final-image">This image configuration includes the required packages to bake into the final image.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wireguard-vpn">Wireguard VPN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-factory-images">Updating Factory Images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-links">Useful Links</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2017-2025, Foundries.io, Ltd.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
